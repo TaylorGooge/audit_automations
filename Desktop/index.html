@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- bootstrap dependencies -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel = "stylesheet" type= "text/css" href="style-sheet.css"/>
+
+<title>Taylor Googe, Computer Science Student</title>
+
+
+    <!-- header image-->
+    <div class="d-flex justify-content-center">
+        <img src="developer.jpg" class="img-fluid" alt="The word 'Developer' written on a paper on a desk">
+    </div>
+
+
+    <!-- nav bar -->
+    <nav class= "navbar navbar-expand-lg bg-secondary navbar-dark justify-content-center" >
+      <div class = "container fluid" style= "justify-content: center;">
+        <ul class = "navbar-nav" >
+          <li class = "nav-item active"> <a class = "nav-link" href="#gotocv">CV</a> </li>
+          <li class = "nav-item"><a class = "nav-link" href="#gotoprojects">Projects</a> </li>
+          <li class = "nav-item"><a  class = "nav-link" href="#gotocontact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- cv section -->
+  
+    <div id="gotocv" class = "container bg-light">
+          <h3>CV/ Resume</h3>
+          <iframe src="https://drive.google.com/file/d/11_2ZeSn0Z565WRs8onshX8jjxQhM7oBw/preview", style='height: 800px; width: 100%;', scrolling= "no", framenborder = "0" ></iframe>
+    </div>
+  
+
+    <!--projects section-->  
+    <div id="gotoprojects" class = "container bg-light">
+            <h3>Projects</h3>
+            <div class="accordion" id="myAccordion">
+                <div class="panel">
+                    <button type="button" class="button" data-toggle="collapse" data-target="#collapsible-1" data-parent="#myAccordion" style= "margin-bottom: 5px;">Annual Reporting Requirements Prototype</button>
+                    <div id="collapsible-1" class="collapse">
+                        <p>
+                            Developed an in-house web app prototype using Node, HTML/CSS, and
+Javascript for employees to submit annual reporting data via the
+company intranet for the first time in company history. Code for this project can be found <a href=https://github.com/TaylorGooge/PSC_Annual_Survey>here</a>.
+                        </p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <button type="button" class="button" data-toggle="collapse" data-target="#collapsible-2" data-parent="#myAccordion" style= "margin-bottom: 5px;"  >Data Auditing Automation Prototype</button>
+                    <div id="collapsible-2" class="collapse">
+                        <p>
+                            Developed an in-house app prototype using Python with Pandas that
+automated data auditing processes for the data auditing employee role. Currently under development.
+                        </p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <button type="button" class="button" data-toggle="collapse" data-target="#collapsible-3" data-parent="#myAccordion" style= "margin-bottom: 5px;">Last Miel Apiaries</button>
+                    <div id="collapsible-3" class="collapse">
+                       <p> Last Miel Apiairies was developed using HTML/CSS, Javascript, and Bootstrap as a final project for web development. The project can be found <a href = "https://taylorgooge.github.io/LastMielApiaries/">here</a>. </p>
+                    </div>
+                </div>
+                <div class="panel">
+                    <button type="button" class="button" data-toggle="collapse" data-target="#collapsible-4" data-parent="#myAccordion" style= "margin-bottom: 5px;">Command Line Games</button>
+                    <div id="collapsible-4" class="collapse">
+                       <ul>
+                           <li>
+                                <h1 style = "font-size: 18px;">Sudoku Game and Soduku Solver</h1>
+                                <p>
+                                    Sudoku Game is a CLI implementation of a Sudoku Game and Sudoku Solver developed usign Python as a final project for Introduction to Computer Science II. The source code can be found <a href= "https://github.com/TaylorGooge/Sudoku_Game" >here</a>.          
+                                </p>
+    
+                           </li>
+                           <li>
+                                <h1 style = "font-size: 18px;"> Xiangqi</h1>
+                      
+                                <p>
+                                    Xiangqi Game is a CLI implementation of Xiangqi ("Chinese Chess") developed usign Python as a final project for Introduction to Computer Science I. The source code can be found <a href= "https://github.com/TaylorGooge/XiangqiGame" >here</a>.                                    
+                                </p>
+                           </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+         
+    </div>
+    
+   <!-- contact form -->
+    <div id="gotocontact" class = "container bg-light">
+            <h3>Contact Me</h3>
+      <div class = "contact-form">
+        <div class= 'container'>
+          <form action= "https://formspree.io/f/xdoygnbn" method = "POST"></form>
+            <div class= "form-group">
+              <label for="Name">Name</label>
+              <input type="text" class="form-control" id="name" required style = "width: 300px">
+            </div>
+            <div class= "form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email"required style = "width: 300px">
+            </div>
+            <div class= "form-group">
+              <label for="Message">Message</label>
+              <input type="text" class="form-control" id="message" required style= "width: 300px; height: 300px">
+            </div>
+            <buton type = submit class = "btn btn-primary" style = "margin-bottom:10px;">Submit</buton>
+         
+          </form>
+        </div>
+      </div>          
+              
+        
+    
+     
+            
+        
+  
+  
