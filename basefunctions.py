@@ -47,9 +47,11 @@ def caselist(df, start, end):
     # choose date range for cohort
     cl_data = cl_data[(cl_data['Admission Date'] >= start) & (cl_data['Admission Date'] <= end)]
 
-    # find rows with duplicates, remove duplicates, return results to func
+    # find rows with duplicates, remove duplicates
     cl_report = cl_data[cl_data.values == -1]
     cl_report.drop_duplicates(inplace=True)
+
+    # return results to func
     return cl_report
 
 
@@ -59,7 +61,7 @@ def caseinfo(df, start, end):
     # format screening dates to computer readable format
     ci_data['ScreeningDate'] = pd.to_datetime(ci_data['ScreeningDate'])
 
-    # identify blanks
+   # cast blanks to -1
     ci_data = ci_data.fillna(-1)
 
     # delete unneeded rows
@@ -71,6 +73,8 @@ def caseinfo(df, start, end):
     # find rows with blank and remove duplicate rows
     ci_report = ci_data[ci_data.values == -1]
     ci_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return ci_report
 
 def othercourt(df,start,end):
@@ -79,7 +83,7 @@ def othercourt(df,start,end):
     # format screening dates to computer readable format
     oci_data['ScreeningDate'] = pd.to_datetime(oci_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     oci_data = oci_data.fillna(-1)
 
     # delete unneeded rows
@@ -91,6 +95,8 @@ def othercourt(df,start,end):
     # find rows with blank and remove duplicate rows
     oci_report = oci_data[oci_data.values == -1]
     oci_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return oci_report
 
 def screeningassessment(df,start,end):
@@ -99,7 +105,7 @@ def screeningassessment(df,start,end):
     # format screening dates to computer readable format
     sa_data['ScreeningDate'] = pd.to_datetime(sa_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     sa_data = sa_data.fillna(-1)
 
     # delete unneeded rows
@@ -111,6 +117,8 @@ def screeningassessment(df,start,end):
     # find rows with blank and remove duplicate rows
     sa_report = sa_data[sa_data.values == -1]
     sa_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return sa_report
 
 def diagnosis(df,start,end):
@@ -119,7 +127,7 @@ def diagnosis(df,start,end):
     # format screening dates to computer readable format
     dx_data['ScreeningDate'] = pd.to_datetime(dx_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     dx_data = dx_data.fillna(-1)
 
     # delete unneeded rows
@@ -131,6 +139,8 @@ def diagnosis(df,start,end):
     # find rows with blank and remove duplicate rows
     dx_report = dx_data[dx_data.values == -1]
     dx_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return dx_report
 
 def relatedparties(df,start,end):
@@ -139,7 +149,7 @@ def relatedparties(df,start,end):
     # format screening dates to computer readable format
     rp_data['ScreeningDate'] = pd.to_datetime(rp_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     rp_data = rp_data.fillna(-1)
 
     # delete unneeded rows
@@ -151,6 +161,8 @@ def relatedparties(df,start,end):
     # find rows with blank and remove duplicate rows
     rp_report = rp_data[rp_data.values == -1]
     rp_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return rp_report
 
 def veteraninfo(df,start,end):
@@ -159,7 +171,7 @@ def veteraninfo(df,start,end):
     # format screening dates to computer readable format
     mi_data['ScreeningDate'] = pd.to_datetime(mi_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     mi_data = mi_data.fillna(-1)
 
     # delete unneeded rows
@@ -171,6 +183,8 @@ def veteraninfo(df,start,end):
     # find rows with blank and remove duplicate rows
     mi_report = mi_data[mi_data.values == -1]
     mi_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return mi_report
 
 def militaryreport(df,start,end):
@@ -179,7 +193,7 @@ def militaryreport(df,start,end):
     # format admission dates to computer readable format
     mil_data['AdmissionDate'] = pd.to_datetime(mil_data['AdmissionDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     mil_data = mil_data.fillna(-1)
 
     # if a person is still active military, discharge date is NA
@@ -199,6 +213,8 @@ def militaryreport(df,start,end):
     # find rows with blank and remove duplicate rows
     mil_report = mil_data[mil_data.values == -1]
     mil_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return mil_report
 
 def mentalhealth(df,start,end):
@@ -207,7 +223,7 @@ def mentalhealth(df,start,end):
     # format screening dates to computer readable format
     men_data['ScreeningDate'] = pd.to_datetime(men_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     men_data = men_data.fillna(-1)
 
     # if the client is competent competency eval elements are NA
@@ -224,6 +240,8 @@ def mentalhealth(df,start,end):
     # find rows with blank and remove duplicate rows
     men_report = men_data[men_data.values == -1]
     men_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return men_report
 
 def familyinfo(df,start,end):
@@ -232,7 +250,7 @@ def familyinfo(df,start,end):
     # format screening dates to computer readable format
     fam_data['ScreeningDate'] = pd.to_datetime(fam_data['ScreeningDate'])
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     fam_data = fam_data.fillna(-1)
 
     # delete unneeded rows
@@ -245,6 +263,7 @@ def familyinfo(df,start,end):
     fam_report = fam_data[fam_data.values == -1]
     fam_report.drop_duplicates(inplace=True)
 
+    #return results to func
     return fam_report
 
 def pregnancy(df,start,end):
@@ -270,6 +289,7 @@ def pregnancy(df,start,end):
     p_report = p_data[p_data.values == -1]
     p_report.drop_duplicates(inplace=True)
 
+    #return results to func
     return p_report
 
 def treatment(df,start,end):
@@ -278,7 +298,7 @@ def treatment(df,start,end):
     # format admission dates to computer readable format
     tx_data['Admit Date'] = pd.to_datetime(tx_data['Admit Date'])
 
-    # fill in blank rows with -1
+   # cast blanks to -1
     tx_data = tx_data.fillna(-1)
 
     # if the treatment is still active, discharge date and discharge reason is NA
@@ -294,6 +314,8 @@ def treatment(df,start,end):
     # find rows with blank and remove duplicate rows
     tx_report = tx_data[tx_data.values == -1]
     tx_report.drop_duplicates(inplace=True)
+
+    #return results to func
     return tx_report
 
 def ancillary(df,start,end):
@@ -306,7 +328,7 @@ def ancillary(df,start,end):
     a_data.loc[a_data["Status"] == "Ongoing", 'DateEnded'] = "NA"
     a_data.loc[a_data["Status"] == "In Progress", 'DateEnded'] = "NA"
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     a_data = a_data.fillna(-1)
 
     # delete unneeded rows
@@ -319,6 +341,7 @@ def ancillary(df,start,end):
     a_report = a_data[a_data.values == -1]
     a_report.drop_duplicates(inplace=True)
 
+    #return results to func
     return a_report
 
 def drugtest(df,start=None,end=None):
@@ -329,7 +352,8 @@ def drugtest(df,start=None,end=None):
 
     dr_report = dr_data
 
-    return dr_data
+    #return results to func
+    return dr_report
 
 def incentives(df,start=None,end=None):
     in_data = pd.read_csv('IncentiveReport.csv')
@@ -338,6 +362,8 @@ def incentives(df,start=None,end=None):
     in_data.drop(df, axis=1, inplace=True)
 
     in_report = in_data
+
+    #return results to func
     return in_report
 
 def jail(df,start=None,end=None):
@@ -349,7 +375,7 @@ def jail(df,start=None,end=None):
     # if the person has not been discharged yet, jail release is NA
     j_data.loc[j_data["CasePhase"] != "Discharged", 'JailReleasedDate'] = "NA"
 
-    # fill in blank rows with -1
+    # cast blanks to -1
     j_data = j_data.fillna(-1)
 
     # delete unneeded rows
@@ -359,15 +385,18 @@ def jail(df,start=None,end=None):
     j_report = j_data[j_data.values == -1]
     j_report.drop_duplicates(inplace=True)
 
+    #return results to func
     return j_report
 
 def suspension(df,start=None,end=None):
     sus_data = pd.read_csv('SuspendedReport.csv')
 
-    # delete unneeded rows  "
+    # delete unneeded rows 
     sus_data.drop(df, axis=1, inplace=True)
 
     sus_report = sus_data
+
+    #return results to func
     return sus_report
 
 

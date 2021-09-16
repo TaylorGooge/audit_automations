@@ -153,7 +153,6 @@ def formatter(sheet):
         'value': -1,
         'format': redfill})
 
-
 writer = pd.ExcelWriter(report_name, engine='xlsxwriter')
 caselist_report.to_excel(writer, index=False, sheet_name="caselist")
 othercourt_report.to_excel(writer, index=False, sheet_name='othercourtinvolvement')
